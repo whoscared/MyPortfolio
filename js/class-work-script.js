@@ -32,9 +32,9 @@ function calculate(vehicle) {
     let resultImg = document.getElementById('resImg');
 
     if (possibleDistance >= pathLength) {
-        resultImg.src = "img/sm_1.png";
+        resultImg.src = "img/cw-sm_1.png";
     } else {
-        resultImg.src = "img/sm_2.png";
+        resultImg.src = "img/cw-sm_2.png";
     }
 }
 
