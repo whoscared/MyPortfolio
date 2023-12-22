@@ -102,6 +102,8 @@ html, body {
     background-color: var(--dark-bg);
     color: var(--header-text);
     letter-spacing: normal;
+    position: fixed;
+    width: 100%;
 }
 
 .nav-row {
