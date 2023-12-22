@@ -1,0 +1,132 @@
+.body {
+    background-color: rgb(210, 235, 235);
+    font-family: "Akshar";
+}
+
+.name{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name_img{
+    width: 35%;
+    height: 35%;
+    margin-top: 5%;
+}
+
+.test{ 
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1%;
+}
+
+.item-question{
+    font-family: "Akshar";
+    font-size: 145%;
+    margin-bottom: 5%;
+}
+.item-answer{
+    font-family: "Akshar";
+    margin: 0;
+    padding: 0;
+    font-size: 120%;
+    list-style: none;
+}
+
+.btns{
+    margin-top: 2%;
+}
+
+.btn{
+    font-family: "Rubik";
+    margin-block: 1%;
+    font-size: 105%;
+    width: 100%;
+    background-color:rgb(168, 168, 240);
+    justify-content: center;
+    align-items: center;
+}
+
+.notice{
+    margin-inline: 20%;
+}
+
+.answer-div {
+    font-family: "Akshar";
+    position: relative;
+    margin-block: 1%;
+    font-size: 85%;
+    background-color:rgb(168, 168, 240);
+    left: 0;
+    transition: opacity 1s;
+}
+
+.end-block {
+    font-family: "Akshar";
+    display: flexbox;
+}
+
+.question-end {
+    font-family: "Akshar";
+    position: relative;
+    margin-block: 3%;
+    font-size: 100%;
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+.item-question-end {
+    margin-block: 1%;
+    background-color:rgb(168, 168, 240);
+}
+
+.answer-div:hover {
+    animation: hover_answer 1s;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes hover_answer {
+    0% {
+        background-color:rgb(168, 168, 240);
+    }
+    100% {
+        background-color:rgb(102, 102, 169);
+    }
+}
+
+.results {
+    font-family: "Rubik";
+    font-size: 145%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    justify-content: center;
+    align-items: center;
+    font-size: 155%;
+    color:rgb(102, 102, 169);
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/RubikSprayPaint-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Akshar";
+    src: url(../fonts/SawarabiGothic-Regular.ttf);
+}
+
+.next-test {
+    font-family: "Rubik";
+}

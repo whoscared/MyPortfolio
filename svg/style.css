@@ -1,0 +1,116 @@
+.body_f {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+}
+
+.container:active {
+    background-image: url(img/фон.png);
+}
+
+.item1{
+    align-self:flex-start;
+    width: 50%;
+    height: 50%;
+}
+.item2{
+    align-self:flex-end;
+    width: 50%;
+    height: 50%;
+    left: 100%;
+    top: 100%;
+}
+
+.container:active .item2 {
+    animation: click 1s ;
+    animation-fill-mode: forwards;
+}
+
+.heart{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    display: none;
+}
+
+.container:hover .heart {
+    display: block;
+    offset-path: path('M88.5 1H7.5L3 3.5L1 8.5V89L3 94.5L7.5 98.5H88.5L98.5 107V187.5L101.5 193.5L107 199H187L193.5 193.5L197 187.5V107L193.5 101.5L187 98.5H107L98.5 89V8.5L95.5 3.5L88.5 1Z');
+    animation: board_anim 5s linear ;
+}
+
+.container:active .heart {
+    display: none;
+}
+
+.sun {
+    position: absolute;
+    left: 33%;
+    top: 33%;
+    height: 80%;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.container:active .sun {
+    opacity: 1;
+    animation: trambling-animation 2s;
+}
+
+#text {
+    width: 30%;
+    position: absolute;
+    left: 53%;
+    top: 3%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.container:active #text {
+    opacity: 1;
+}
+
+@keyframes board_anim {
+    from {
+        offset-distance : 0%
+    }
+    to {
+        offset-distance : 100%
+    }
+}
+
+@keyframes click {
+    0% {
+        left: 100%;
+        top: 100%;
+    }
+    100% {
+        position: absolute;
+        left: 1%;
+        top: 1%;
+    }
+}
+
+@keyframes trambling-animation {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    10%, 30% {
+        transform: rotate(-10deg);
+    }
+    20%, 40% {
+        transform: rotate(10deg);
+    }
+}
